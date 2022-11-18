@@ -25,8 +25,8 @@ const Menu = () => {
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
                                     <Nav.Link href="/">Inicio</Nav.Link>
-                                    <Nav.Link href="/">Nuestro Club</Nav.Link>
-                                    <Nav.Link href="#action2">Tienda</Nav.Link>
+                                    <Nav.Link href="/nosotros">Nosotros</Nav.Link>
+                                    <Nav.Link href="/tienda">Tienda</Nav.Link>
                                     <Nav.Link href="/contacto">Contacto</Nav.Link>
                                 </Nav>
                         

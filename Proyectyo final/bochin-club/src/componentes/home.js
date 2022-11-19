@@ -3,6 +3,7 @@ import tesorero from "./fotos/P1010279.JPG"
 import comisionDirectiva from "./fotos/SDC16942.JPG"
 import presidencia from "./fotos/4.jpeg"
 import "./estilos/home.css";
+import CarouselEjemplo from "./carousel/carousel";
 
 const Home = () => {
     return(
@@ -39,6 +40,7 @@ const Home = () => {
                 <h3>Actividades</h3>
                 <p>Orgullo dock sud, Orgullo avellaneda y torneo de bochas entre otras actividades</p>
 
+<CarouselEjemplo />
 
                 
             </aside>

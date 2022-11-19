@@ -1,0 +1,125 @@
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Lobster', cursive;
+    padding-top: 1rem;
+    color: black;
+   
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+}
+
+.aside {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* imagenes de portada------------- */
+.imagenes {
+    width: 80%;
+    height: 40%;
+    border-radius: 15px;
+}
+
+.imagenescarru {
+    height: 80%;
+    width: 40%;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* tablets 768--------------- */
+@media(min-width:768px) {
+    h2 {
+        color: black;
+        padding-top: 1rem;
+    }
+
+    h3 {
+        font-size: 30px;
+        text-shadow: 15px 15px 15px greenyellow;
+    }
+
+    .imagenes {
+        box-shadow: 10px 10px 10px black;
+        border-radius: 20px;
+    }
+
+    .seccion.uno {
+        flex-direction: row;
+    }
+
+    .seccion.dos {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .seccion.tres {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .imagenes {
+        width: 50%;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+/* pantallas    min-992 */
+@media(min-width:992px) {
+    .principal {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "griduno giddos"
+            "gridtres aside"
+        ;
+    }
+
+    .griduno {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .griddos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gridtres {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .seccion {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagenes {
+        width: 80%;
+        height: 80%;
+    }
+}

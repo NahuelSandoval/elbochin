@@ -2,41 +2,34 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Outlet , Link} from 'react-router-dom';
 
-const Menu = () => {
+
+
+const NavBarExamples = () => {
     return (
         <>
-            {[ 'sm' ].map((expand) => (
-                <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-                    <Container fluid>
-                        <Navbar.Brand href="#">Fraternidad Bochin Club</Navbar.Brand>
-                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                        <Navbar.Offcanvas
-                            id={`offcanvasNavbar-expand-${expand}`}
-                            aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                            placement="end"
-                        >
-                            <Offcanvas.Header closeButton>
-                                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                    Menu
-                                </Offcanvas.Title>
-                            </Offcanvas.Header>
-                            <Offcanvas.Body>
-                                <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link href="/">Inicio</Nav.Link>
-                                    <Nav.Link href="/nosotros">Nosotros</Nav.Link>
-                                    <Nav.Link href="/tienda">Tienda</Nav.Link>
-                                    <Nav.Link href="/contacto">Contacto</Nav.Link>
-                                </Nav>
-                        
-                            </Offcanvas.Body>
-                        </Navbar.Offcanvas>
-                    </Container>
-                </Navbar>
-            ))}
+            <Navbar bg="light" expand="lg">
+                <Container>
+                    <Navbar.Brand as={Link} to= "/" >React-Bootstrap</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link as={Link} to= "/" >Home</Nav.Link>
+                            <Nav.Link as={Link} to= "/nosotros" >Nosotros</Nav.Link>
+                            <Nav.Link as={Link} to= "/tienda" >Tienda</Nav.Link>
+                            <Nav.Link as={Link} to= "/contacto" >Contacto</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+<section>
+    <Outlet></Outlet>
+</section>
+
         </>
     )
 }
 
-export default Menu;
+export default NavBarExamples;

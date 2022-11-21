@@ -1,12 +1,13 @@
 import React from 'react'
+import "../productos.css"
 
-const Plantilla = (jugador) => {
-    return <div class="caja">
-                <h2>{jugador.name}</h2>
-                <img src={jugador.thumbnail} class="foto" />
-                <p>edad: {jugador.edad}</p>
-                <p>pais: {jugador.pais}</p>
-                <button id = '${jugador.name}' class = 'btnCompra'> Comprar </button> 
+const Plantilla = (producto) => {
+    return <div className="caja">
+                <h2>{producto.name}</h2>
+                <img src={producto.thumbnail} className="foto" alt="producto"/>
+                <p>precio: ${producto.precio}</p>
+                <p>producto n°: {producto.id}</p>
+                <button id = '{producto.name}' className = 'btnCompra'> Comprar </button> 
             </div>
 }
 

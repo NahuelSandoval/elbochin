@@ -1,55 +1,56 @@
 import React, { useState } from 'react'
 import Plantilla from './Plantilla/Plantilla';
+import "./productos.css"
 
-const ProductosEnVenta = () => {
+const ProductosEnVenta  = () => {
 
-    const [jugadores , setJugadores] = useState ([
+    const [productos ] = useState ([
         {
-            name: 'messi',
-            edad: 37,
-            pais: 'argentina',
+            name: 'Buzo',
+            precio: 1500,
+            id: 1,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'ronaldo',
-            edad: 42,
-            pais: 'portugal',
+            name: 'Campera',
+            precio: 2200,
+            id: 2,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'mbappe',
-            edad: 23,
-            pais: 'francia',
+            name: 'Conjunto',
+            precio: 3800,
+            id: 3,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'mbappe',
-            edad: 23,
-            pais: 'francia',
+            name: 'Gorro',
+            precio: 800,
+            id: 4,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'mbappe',
-            edad: 23,
-            pais: 'francia',
+            name: 'Taza',
+            precio: 450,
+            id: 5,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'mbappe',
-            edad: 23,
-            pais: 'francia',
+            name: 'Bufanda',
+            precio: 800,
+            id: 6,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'mbappe',
-            edad: 23,
-            pais: 'francia',
+            name: 'Llavero',
+            precio: 300,
+            id: 7,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
         {
-            name: 'mbappe',
-            edad: 23,
-            pais: 'francia',
+            name: 'Chomba',
+            precio: 1500,
+            id: 8,
             thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfjktLMLOISpBFpB0l5bX_IjBFvxH83utuA&usqp=CAU",
         },
     ]);
@@ -60,8 +61,8 @@ const ProductosEnVenta = () => {
         return `<div class="caja">
                     <h2>${jugador.name}</h2>
                     <img src="${jugador.thumbnail}" class="foto" >
-                    <p>edad: ${jugador.edad}</p>
-                    <p>pais: ${jugador.pais}</p>
+                    <p>precio: ${jugador.precio}</p>
+                    <p>id: ${jugador.id}</p>
                     <button id = '${jugador.name}' class = 'btnCompra'> Comprar </button> 
                 </div>`
     }
@@ -79,13 +80,17 @@ const ProductosEnVenta = () => {
     } */
     return (
 
-        <div>productos
-        {jugadores.map((jugador) => {
+        <main>productos
+            <section id="figuritas">
+
+            
+        {productos.map((producto) => {
             return (
-                <Plantilla name={jugador.name} thumbnail={jugador.thumbnail} edad={jugador.edad} pais={jugador.pais}/>
+                <Plantilla key={producto.id} name={producto.name} thumbnail={producto.thumbnail} precio={producto.precio} id={producto.id}/>
             );
             })}
-            </div>
+            </section>
+            </main>
     )
 }
 

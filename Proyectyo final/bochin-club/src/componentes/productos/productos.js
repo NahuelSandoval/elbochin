@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Plantilla from './Plantilla/Plantilla';
 import "./productos.css"
 
-const ProductosEnVenta  = () => {
+const ProductosEnVenta = () => {
 
-    const [productos ] = useState ([
+    const [productos] = useState([
         {
             name: 'Buzo',
             precio: 1500,
@@ -55,42 +55,39 @@ const ProductosEnVenta  = () => {
         },
     ]);
 
-/*     const figuritasHTML = document.getElementById('figuritas')
-
-    const plantilla = (jugador) => {
-        return `<div class="caja">
-                    <h2>${jugador.name}</h2>
-                    <img src="${jugador.thumbnail}" class="foto" >
-                    <p>precio: ${jugador.precio}</p>
-                    <p>id: ${jugador.id}</p>
-                    <button id = '${jugador.name}' class = 'btnCompra'> Comprar </button> 
-                </div>`
-    }
-    for (jugador of jugadores) {
-        figuritasHTML.innerHTML += plantilla(jugador)
-    }
-    let botones = document.getElementsByClassName('btnCompra')
-    console.log(botones);
-
-    for (const boton of botones) {
-        boton.addEventListener('click', function () {
-            let seleccion = jugadores.find(jugador => jugador.name == this.id);
-            console.log('El jugador es ' + seleccion.name);
-        })
-    } */
+    /*     const figuritasHTML = document.getElementById('figuritas')
+    
+        const plantilla = (jugador) => {
+            return `<div class="caja">
+                        <h2>${jugador.name}</h2>
+                        <img src="${jugador.thumbnail}" class="foto" >
+                        <p>precio: ${jugador.precio}</p>
+                        <p>id: ${jugador.id}</p>
+                        <button id = '${jugador.name}' class = 'btnCompra'> Comprar </button> 
+                    </div>`
+        }
+        for (jugador of jugadores) {
+            figuritasHTML.innerHTML += plantilla(jugador)
+        }
+        let botones = document.getElementsByClassName('btnCompra')
+        console.log(botones);
+    
+        for (const boton of botones) {
+            boton.addEventListener('click', function () {
+                let seleccion = jugadores.find(jugador => jugador.name == this.id);
+                console.log('El jugador es ' + seleccion.name);
+            })
+        } */
     return (
-
         <main>productos
             <section id="figuritas">
-
-            
-        {productos.map((producto) => {
-            return (
-                <Plantilla key={producto.id} name={producto.name} thumbnail={producto.thumbnail} precio={producto.precio} id={producto.id}/>
-            );
-            })}
+                {productos.map((producto) => {
+                    return (
+                        <Plantilla key={producto.id} name={producto.name} thumbnail={producto.thumbnail} precio={producto.precio} id={producto.id} />
+                    );
+                })}
             </section>
-            </main>
+        </main>
     )
 }
 

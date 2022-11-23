@@ -198,7 +198,13 @@ textarea {
 legend{
     font-family: 'Lobster', cursive;
 }
-
+.celda{
+    width: 15rem;
+}
+.camposObligatorios{
+    color: red;
+    font-size: 15px;
+}
 /* --------tablettttt---------- */
 @media (min-width:768px) {
     .campos {
@@ -232,7 +238,10 @@ legend{
         font-size: 20px;
     }
 }
-
+.celda{
+    width: 15rem;
+    font-size: 17px;
+}
 /*-------------pantallas------------- */
 @media(min-width:992px) {
     body {
@@ -288,7 +297,7 @@ legend{
     }
 
     .celda {
-        width: 15rem;
+        width: 25rem;
         height: 2rem;
         font-size: 25px;
         border: none;

@@ -79,7 +79,8 @@ const ProductosEnVenta = () => {
             })
         } */
     return (
-        <main>productos
+        <main>
+            <h2>Tienda de regalos</h2>
             <section id="figuritas">
                 {productos.map((producto) => {
                     return (

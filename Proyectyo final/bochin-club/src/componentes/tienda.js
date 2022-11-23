@@ -4,7 +4,7 @@ const Tienda = () => {
     return (
         <div>
             < ProductosEnVenta/>
-            <h3> esta es la tienda </h3>
+            <h3> Gracias por la colaboración </h3>
         </div>
     )
 }

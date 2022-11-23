@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     gap: 5 rem;
     justify-content: space-around;
+    transition: all .3s ease-in-out;
 }
 .caja{
     background-color: aquamarine;
@@ -12,6 +13,9 @@
     width: 200px;
     border-radius: 10px;
     margin: 20px;
+}
+.caja:hover{
+    transform: scale(1.1);
 }
 .foto{
     width: 100%;

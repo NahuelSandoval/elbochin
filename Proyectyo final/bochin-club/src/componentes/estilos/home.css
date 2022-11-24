@@ -43,7 +43,7 @@ h3 {
 .imagenes:hover{
     transform: scale(1.05);
     transition: all .3s ease-in-out;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px 5px gray;
 }
 .imagenescarru {
     width: 100%;
@@ -158,7 +158,8 @@ form {
     padding: 2rem;
     margin: 2rem;
     border-radius: 20px;
-    background-color: ghostwhite;
+    background: rgb(185,183,219);
+background: linear-gradient(270deg, rgba(185,183,219,1) 0%, rgba(252,252,252,0.9612219887955182) 100%, rgba(0,212,255,1) 100%);
     width: 30rem;
 }
 

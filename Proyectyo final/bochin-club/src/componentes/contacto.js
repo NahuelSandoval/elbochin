@@ -1,10 +1,12 @@
 import React from "react";
 import "./estilos/home.css"
 import { useForm } from "react-hook-form"
+
 import Button from 'react-bootstrap/Button';
 
 
 const Contacto = () => {
+   /*  const [sended, setSended ] = usesState(3) */
     const { register, formState:{ errors} , handleSubmit} = useForm("mkneagjq");
 const onSubmit = (data) => {
     console.log(data);
@@ -13,7 +15,7 @@ const onSubmit = (data) => {
 
     return (
 
-        <form onSubmit={handleSubmit(onSubmit)} action="https://formspree.io/f/mkneagjq" className="form" method="post">
+        <form onSubmit={handleSubmit(onSubmit)} fetch="https://formspree.io/f/mkneagjq" className="form" method="post">
 
             <fieldset className="campos">
                 <legend>Complete el formulario</legend>

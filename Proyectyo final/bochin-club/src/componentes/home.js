@@ -8,7 +8,7 @@ import CarouselEjemplo from "./carousel/carousel";
 const Home = () => {
     return (
         <div className="contenido">
-            <h2>Nuestro Club</h2>
+            <h2>Nuestro club</h2>
             <main className="principal">
                 <div className="griduno">
                     <h3>Tesorero</h3>

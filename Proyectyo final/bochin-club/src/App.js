@@ -6,7 +6,7 @@ import Contacto from './componentes/contacto'
 import Nosotros from './componentes/nosotros'
 import Tienda from './componentes/tienda'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
+import "./componentes/estilos/home.css"
 
 function App() {
   return (

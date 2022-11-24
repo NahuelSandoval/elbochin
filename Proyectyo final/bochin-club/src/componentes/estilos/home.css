@@ -1,9 +1,14 @@
+.App{
+    background: rgb(185,183,219);
+background: linear-gradient(90deg, rgba(185,183,219,1) 0%, rgba(252,252,252,0.9612219887955182) 100%, rgba(0,212,255,1) 100%);
+}
 h2 {
     text-align: center;
     font-size: 3rem;
     font-family: 'Lobster', cursive;
     padding-top: 1rem;
     color: black;
+    font-weight: bolder;
 }
 
 h3 {
@@ -35,7 +40,11 @@ h3 {
     height: 40%;
     border-radius: 15px;
 }
-
+.imagenes:hover{
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
+    box-shadow: 5px 5px 5px black;
+}
 .imagenescarru {
     width: 100%;
     height: 100%;
@@ -148,7 +157,6 @@ form {
     align-items: flex-start;
     padding: 2rem;
     margin: 2rem;
-    border-color: gold;
     border-radius: 20px;
     background-color: ghostwhite;
     width: 30rem;
@@ -166,23 +174,11 @@ textarea {
     align-items: stretch;
     width: 100%;
     flex-wrap: nowrap;
+    border-radius: 10px;
+    color: red;
+    padding-bottom: 5px;
+    gap: 5px;
 }
-
-.botones input {
-    padding: 5px;
-    text-transform: lowercase;
-    font-family: 'Inter Tight', sans-serif;
-}
-
-.botones input:hover {
-    background-color: blue;
-    color: gold;
-    border-radius: 5px;
-    text-transform: uppercase;
-    box-shadow: 15px 15px 15px aquamarine;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .celda,
 select {
     border: none;
@@ -192,7 +188,7 @@ select {
 
 textarea {
     border-radius: 10px;
-    box-shadow: 15px 15px 15px aquamarine;
+    box-shadow: 5px 5px 5px rgb(40, 42, 58);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 legend{
@@ -221,27 +217,21 @@ legend{
 
     legend {
         font-size: 2rem;
-        color: rgb(122, 41, 41);
         text-align: center;
-    }
-
-    .botones input {
-        font-size: 2rem;
-    }
-
-    .botones input:hover {
-        background-color: yellow;
-        color: black;
     }
     textarea {
         width: 30rem;
         font-size: 20px;
     }
+    .celda{
+        width: 20rem;
+        font-size: 20px;
+    }
+    .botones{
+        width: 80%;
+    }
 }
-.celda{
-    width: 15rem;
-    font-size: 17px;
-}
+
 /*-------------pantallas------------- */
 @media(min-width:992px) {
     body {
@@ -258,7 +248,6 @@ legend{
 
     legend {
         color: black;
-        text-shadow: 1rem 1rem 1rem red;
     }
 
     .socios {
@@ -266,40 +255,22 @@ legend{
     }
 
     .socios input {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 12px;
     }
-
-    .botones input {
-        text-transform: lowercase;
-        border-radius: 10px;
-    }
-
-    .botones input:hover {
-        background-color: blueviolet;
-        box-shadow: 3rem 3rem 3rem black;
-        text-transform: uppercase;
-    }
-
     label,
     .terminos {
-        font-size: 30px;
+        font-size: 17px;
     }
 
     .terminos input {
-        height: 20px;
-        width: 20px;
+        height: 12px;
+        width: 12px;
     }
-
-    select {
-        font-size: 2rem;
-        border-radius: 15px;
-    }
-
     .celda {
         width: 25rem;
         height: 2rem;
-        font-size: 25px;
+        font-size: 17px;
         border: none;
         border-radius: 5px;
         border-bottom: 5px;
@@ -307,6 +278,6 @@ legend{
 
     textarea {
         width: 40rem;
-        font-size: 25px;
+        font-size: 20px;
     }
 }

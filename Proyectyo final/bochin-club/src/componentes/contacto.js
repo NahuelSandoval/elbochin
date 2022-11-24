@@ -1,9 +1,11 @@
 import React from "react";
 import "./estilos/home.css"
 import { useForm } from "react-hook-form"
+import Button from 'react-bootstrap/Button';
+
 
 const Contacto = () => {
-    const { register, formState:{ errors} , handleSubmit} = useForm("");
+    const { register, formState:{ errors} , handleSubmit} = useForm("mkneagjq");
 const onSubmit = (data) => {
     console.log(data);
 }
@@ -11,7 +13,7 @@ const onSubmit = (data) => {
 
     return (
 
-        <form onSubmit={handleSubmit(onSubmit)} action="https://formspree.io/f/xyyvebag" className="form" method="post">
+        <form onSubmit={handleSubmit(onSubmit)} action="https://formspree.io/f/mkneagjq" className="form" method="post">
 
             <fieldset className="campos">
                 <legend>Complete el formulario</legend>
@@ -54,9 +56,9 @@ const onSubmit = (data) => {
                 </div>
 
                 <div className="botones">
-                    <input type="submit" value="Enviar" />
 
-                    <input type="reset" />
+                    <Button variant="dark" type="submit" value="Enviar">enviar</Button>
+                    <Button variant="dark" type="reset">restablecer</Button>
 
                 </div>
             </fieldset>

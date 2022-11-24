@@ -85,11 +85,22 @@ const ProductosEnVenta = () => {
                 {productos.map((producto) => {
                     return (
                         <Plantilla key={producto.id} name={producto.name} thumbnail={producto.thumbnail} precio={producto.precio} id={producto.id} />
-                    );
+                        );
                 })}
+
+
             </section>
         </main>
     )
+
+/* const botones = document.getElementsByClassName('btnCompra')
+        console.log(botones);
+        for (const boton of botones) {
+            boton.addEventListener('click', function () {
+                const seleccion = productos.find(producto => producto.name == this.id);
+                console.log('El jugador es ' + seleccion.name);
+            })
+        } */
 }
 
 export default ProductosEnVenta
